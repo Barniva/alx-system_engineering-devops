@@ -1,0 +1,19 @@
+#!/bin/bash
+
+domain="$1"
+subdomain="$2"
+
+if [ -z "$subdomain" ]; then
+  # Display information for default subdomains: www, lb-01, web-01, web-02
+  subdomains=("www" "lb-01" "web-01" "web-02")
+else
+  # Display information for the specified subdomain
+  subdomains=("$subdomain")
+fi
+
+for sub in "${subdomains[@]}"; do
+  result=$(dig "$sub.$domain" | grep -A1 'ANSWER SECTION:')
+  record_type=$(echo "$result" | awk '{print $4}')
+  destination=$(echo "$result" | awk '{print $5}')
+  echo "The subdomain $sub is a $record_type record and points to $destination"
+done

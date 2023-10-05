@@ -26,16 +26,18 @@ defaults
 
 frontend front_http
         bind *:80
+		redirect scheme https code 301 if !{ ssl_fc }
         default_backend back_http
 
 frontend front_https
-        bind 0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.mulubrhan.tech/all.pem
+        bind 0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.mulubrhan.tech/fullchain.pem
         acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
+		use_backend letsencrypt-backend if letsencrypt-acl
         default_backend back_http
 
 backend back_http
         balance roundrobin
+		redirect scheme https if !{ ssl_fc }
         server 275619-web-01 54.85.45.15 check
         server 275619-web-02 35.175.135.106 check
 

@@ -1,7 +1,6 @@
-# ALX Software Engineering DevOps Track :rocket:
+# ALX Software Engineering DevOps Track
 
-!ALX logo
-
+![ALX logo](https://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
 > "Mastering DevOps, one commit at a time!" :trophy:
 
 ## Description :book:
@@ -24,7 +23,20 @@ Welcome to the ALX Software Engineering DevOps Track! Here at ALX, we believe in
 | 0x0B-ssh | SSH |
 | 0x0C-web_server | Web server |
 | 0x0D-web_stack_debugging_0 | Web stack debugging 0 |
+| 0x0E-web_stack_debugging_1 | Web stack debugging 1 |
 | 0x0F-load_balancer | Load balancer |
+| 0x10-https_ssl | HTTPS SSL |
+| 0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter | What happens when you type google.com in your browser and press enter |
+| 0x12-web_stack_debugging_2 | Web stack debugging 2 |
+| 0x13-firewall | Firewall |
+| 0x14-mysql | MySQL |
+| 0x15-api | API |
+| 0x16-api_advanced | API Advanced |
+| 0x17-web_stack_debugging_3 | Web stack debugging 3 |
+| 0x18-webstack_monitoring | Web stack monitoring |
+| 0x19-postmortem | Postmortem |
+| 0x1A-application_server | Application server |
+| 0x1B-web_stack_debugging_4 | Web stack debugging 4 |
 | command_line_for_the_win | Command line for the win |
 
 ## Special Thanks :star2:
